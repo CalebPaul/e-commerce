@@ -15,6 +15,7 @@ export default Ember.Route.extend({
       this.transitionTo('admin');
     },
     save(params) {
+      console.log("admin save: "+params);
       var newProject = this.store.createRecord('project', params);
       newProject.save();
       this.transitionTo('admin');

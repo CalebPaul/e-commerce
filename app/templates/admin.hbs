@@ -1,4 +1,4 @@
-{{add-project}}
+{{add-project save="save"}}
 {{#each model as |project|}}
-  {{admin-tile project=project}}
+  {{admin-tile project=project delete="delete" update="update"}}
 {{/each}}
