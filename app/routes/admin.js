@@ -14,12 +14,14 @@ export default Ember.Route.extend({
       project.save();
       this.transitionTo('admin');
     },
+
     save(params) {
       console.log("admin save: "+params);
       var newProject = this.store.createRecord('project', params);
       newProject.save();
       this.transitionTo('admin');
     },
+
     delete(project) {
       project.destroyRecord();
       this.transitionTo('admin');

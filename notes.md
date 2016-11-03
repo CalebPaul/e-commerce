@@ -4,8 +4,8 @@
 * DONE As a user, I want to add projects to a wish-list.
 * As a user, I'd like to see options for sorting projects.
 * DONE As user, I'd to see a detail view.
-* As an admin, I want to manage (create, update, delete) all projects.
-* Use a helper, somehow!?
+* DONE As an admin, I want to manage (create, update, delete) all projects.
+* Use a helper to show when a project is almost funded! (icon?)
 
 ### Stretch Goals
 * As a user, I'd to see a progress bar to measure funding.

@@ -1,33 +1,26 @@
 <div class="admin-tile well">
   <div class="row">
-    <div class="col-md-4">
-      <img class="header" src={{project.image}}>
+    <div class="col-md-12">
+      <p class="admin-title">{{#link-to 'project' project.id}}{{project.name}}{{/link-to}}</p>
+      <i {{action 'update' project}} class="edit large icon"></i>
+      <i {{action 'delete' project}} class="trash icon large" ></i>
     </div>
-    <div class="col-md-7 col-md-offset-1">
-      <div>
-        <p class="admin-title">{{#link-to 'project' project.id}}{{project.name}}{{/link-to}}</p>
-        <i {{action 'save' project}} class="edit large icon"></i>
-      </div>
-      <br><br><br>
-      <div class="admin-content">
+    <br>
+    <div class="col-md-6 col-md-inset-1">
+      <div class="row">
         <p >By: {{project.owner}}</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
-      <p class="percentage">{{percentage}}% funded</p>
+      <div class="row">
+        <p>Funding goal: ${{project.goal_amount}} </p>
+        <p>Closes {{moment-from-now project.goal_date interval=1000}}</p>
+        <p>${{project.current_amount}}.00 contributed</p>
+      </div>
     </div>
-  </div>
-  <div class="row funds">
-    <div class="col-md-3">
-      <p>Funding goal: ${{project.goal_amount}} </p>
-    </div>
-    <div class="col-md-3">
-      <p>Closes {{moment-from-now project.goal_date interval=1000}}</p>
-    </div>
-    <div class="col-md-3">
-      <p>${{project.current_amount}}.00 contributed</p>
-    </div>
-    <div class="col-md-3">
-      <i class="trash icon large" {{action 'delete' project}}></i>
+    <div class="col-md-5 col-md-offset-1">
+      <div class="hidden-form">
+        {{update-project project=project update="update"}}
+      </div>
     </div>
   </div>
 </div>

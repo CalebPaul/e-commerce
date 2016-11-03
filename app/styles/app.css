@@ -267,6 +267,8 @@ body {
 
 .admin-tile .trash {
   color: red;
+  padding-right: 4px;
+  float: right;
 }
 
 .edit {
@@ -279,4 +281,12 @@ body {
 
 .edit:hover {
   color: #2BDE73;
+}
+
+#update-form {
+
+}
+
+.hidden-form {
+  
 }
