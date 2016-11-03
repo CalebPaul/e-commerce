@@ -7,7 +7,7 @@ export default Ember.Component.extend({
       removeFromWishlist(item) {
         if(confirm("Sre you sure you want to remove this project?")) {
             this.get('wishlist').remove(item);
-        };
+        }
     }
   }
 });
